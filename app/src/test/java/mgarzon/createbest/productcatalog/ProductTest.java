@@ -4,6 +4,8 @@ import org.junit.Test;
 
 public class ProductTest {
 
+    String productPrice = "180.0";
+    double productPriceDouble = Double.parseDouble(productPrice);
     @Test
     public void checkProductName() {
         Product aProduct = new Product("1", "DELL MONITOR", 180);
@@ -20,7 +22,7 @@ public class ProductTest {
     public void checkProductPrice() {
         // I am making this test to fail
         Product aProduct = new Product("1", "DELL MONITOR", 180);
-        assertEquals("Check the price of the product", 180.0, aProduct.getPrice());
+        assertEquals("Check the price of the product", productPriceDouble, aProduct.getPrice());
     }
 
 
